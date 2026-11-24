@@ -255,3 +255,22 @@ li.li-emoji:hover {
     margin-right: 0;
   }
 }
+
+/* Visitors can ask their system for less motion, for example because
+   moving content makes them dizzy. Stop the animations for them and
+   show the intro text as normal, still text. */
+@media (prefers-reduced-motion: reduce) {
+  .paketti,
+  .ukko,
+  .marquee-text {
+    animation: none;
+  }
+
+  .marquee {
+    white-space: normal;
+  }
+
+  .marquee-text {
+    padding-left: 0;
+  }
+}
