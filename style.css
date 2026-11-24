@@ -93,7 +93,15 @@ body::before {
   animation: marquee 25s linear infinite;
 }
 
-.marquee:hover .marquee-text {
+/* The text stops while the mouse is over it, while it has keyboard
+   focus, and after a click or tap (the "paused" class). */
+.marquee {
+  cursor: pointer;
+}
+
+.marquee:hover .marquee-text,
+.marquee:focus .marquee-text,
+.marquee.paused .marquee-text {
   animation-play-state: paused;
 }
 

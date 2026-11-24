@@ -15,6 +15,12 @@
       window.addEventListener("load", () => {
         new cursoreffects.fairyDustCursor();
       });
+
+      // Phones have no hover, so a tap pauses and restarts the scrolling text.
+      document.addEventListener("DOMContentLoaded", () => {
+        const marquee = document.querySelector(".marquee");
+        marquee.addEventListener("click", () => marquee.classList.toggle("paused"));
+      });
     </script>
     <link rel="stylesheet" href="style.css">
   </head>
@@ -27,7 +33,7 @@
         <p class="date"><time datetime="2026-12-04">4.12.2026</time></p>
       </div>
       <div class="intro">
-        <div class="marquee">
+        <div class="marquee" tabindex="0" title="Click or tap to pause">
           <p class="marquee-text">
             <img alt="" src="images/star.png"> Time to dig out the sequins, straighten those bow ties and get ready for Turku's most fabulous, totally unofficial gala night of the year. <img alt="" src="images/star.png">
           </p>
