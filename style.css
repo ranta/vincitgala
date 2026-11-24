@@ -223,21 +223,21 @@ body::before {
   margin-top: 20px;
 }
 
-.content-left {
+.dress-code {
   background-color: rgba(255, 232, 74, 0.88);
   padding: 20px 40px;
   color: #000;
   margin-top: 20px;
 }
 
-.content-right {
+.what-to-expect {
   background-color: #ff3dce;
   padding: 20px 40px;
   color: #0f1870;
   margin-top: 20px;
 }
 
-.content-right h3 {
+.what-to-expect h3 {
   color: #ffe84a;
   font-family: "Courier Prime", monospace;
 }
@@ -326,7 +326,7 @@ body::before {
     font-size: 20px;
   }
 
-  .content ul {
+  .schedule {
     padding-left: 0;
   }
 
