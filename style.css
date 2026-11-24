@@ -432,3 +432,39 @@ body::before {
     display: none;
   }
 }
+
+/* Print */
+
+/* Browsers do not print background colors and images by default. The
+   yellow text would then be yellow on white paper, and the moving and
+   playing parts of the page have no use on paper. */
+@media print {
+  body::before,
+  .paketti-area,
+  canvas,
+  .marquee-toggle,
+  .music {
+    display: none;
+  }
+
+  .header h2,
+  .what-to-expect h3 {
+    color: #0f1870;
+    text-shadow: none;
+  }
+
+  .marquee {
+    white-space: normal;
+  }
+
+  .marquee-text {
+    padding-left: 0;
+    animation: none;
+  }
+
+  .vote::after {
+    content: " (" attr(href) ")";
+    font-weight: normal;
+    word-break: break-all;
+  }
+}
