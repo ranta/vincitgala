@@ -1,8 +1,7 @@
 html,
 body {
   height: 100%;
-  width: 100%;
-  margin: 0 auto;
+  margin: 0;
   font-family: "Comic Relief", cursive, sans-serif;
   background-image: url("images/bg.jpg");
   background-size: cover;
@@ -12,7 +11,6 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding: 20px;
 }
@@ -74,7 +72,6 @@ body {
   padding: 20px 40px;
   color: #000;
   margin-top: 20px;
-  margin-right: 10px;
 }
 .content-right {
   background-color: rgba(255, 61, 206, 0.87);
@@ -173,6 +170,7 @@ li.li-emoji:hover {
 .info-row {
   display: flex;
   justify-content: space-between;
+  column-gap: 10px;
   margin-top: 20px;
 }
 
@@ -269,10 +267,6 @@ li.li-emoji:hover {
   .info-row {
     flex-direction: column;
     width: 100%;
-  }
-
-  .content-left {
-    margin-right: 0;
   }
 }
 
