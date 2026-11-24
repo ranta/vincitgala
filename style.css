@@ -30,18 +30,30 @@ body::before {
   background-color: #ff3dce;
   text-align: center;
   color: #2b46e8;
-  padding: 20px 80px;
+  padding: 20px clamp(16px, 8vw, 80px);
   font-family: "Courier Prime", monospace;
 }
 
+/* The title scales with the window width, so it fits on one line on
+   every screen. It is 58 px on screens wider than about 970 px. */
 .header h1 {
-  font-size: 58px;
+  font-size: clamp(28px, 6vw, 58px);
   margin: 0;
 }
 
+.header h1 img {
+  max-height: 1em;
+}
+
 .header h2 {
+  font-size: clamp(14px, 4vw, 24px);
   color: #ffe84a;
   margin: 0;
+}
+
+/* 1.625em is the natural height of the icons (39 px) at 24 px. */
+.header h2 img {
+  max-height: 1.625em;
 }
 
 .date {
@@ -251,22 +263,6 @@ body::before {
     padding: 16px;
   }
 
-  .header h1 {
-    font-size: 28px;
-  }
-
-  .header h1 img {
-    height: 28px;
-  }
-
-  .header h2 {
-    font-size: 16px;
-  }
-
-  .header h2 img {
-    height: 24px;
-  }
-
   .date {
     font-size: 20px;
   }
@@ -289,6 +285,17 @@ body::before {
   .info-row {
     flex-direction: column;
     width: 100%;
+  }
+}
+
+/* The narrowest phones, for example 320 px wide */
+@media (max-width: 360px) {
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .header h2 {
+    font-size: 13px;
   }
 }
 
