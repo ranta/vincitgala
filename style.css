@@ -1,3 +1,32 @@
+/* Fonts */
+
+/* The fonts are served from this site, not from Google Fonts. Only the
+   Latin character set and the weights the page uses are included.
+   Licenses: fonts/OFL-ComicRelief.txt and fonts/OFL-CourierPrime.txt */
+@font-face {
+  font-family: "Comic Relief";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/comic-relief-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Comic Relief";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/comic-relief-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Courier Prime";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/courier-prime-700.woff2") format("woff2");
+}
+
 /* Page */
 
 html,
