@@ -181,6 +181,12 @@ li.li-emoji:hover {
   margin: 0;
 }
 
+.date {
+  margin: 10px 0 0;
+  font-size: 28px;
+  font-weight: bold;
+}
+
 .schedule-title {
   display: flex;
   align-items: center;
@@ -229,6 +235,10 @@ li.li-emoji:hover {
 
   .header h2 img {
     height: 24px;
+  }
+
+  .date {
+    font-size: 20px;
   }
 
   .content ul {
