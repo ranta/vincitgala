@@ -24,12 +24,22 @@ body::before {
   padding: 20px;
 }
 
+/* Yellow text on pink has too little contrast to read easily. A navy
+   outline around the letters gives it enough contrast. */
+.outlined {
+  text-shadow:
+    -1px -1px 0 #0f1870,
+    1px -1px 0 #0f1870,
+    -1px 1px 0 #0f1870,
+    1px 1px 0 #0f1870;
+}
+
 /* Header */
 
 .header {
   background-color: #ff3dce;
   text-align: center;
-  color: #2b46e8;
+  color: #1a2aa8;
   padding: 20px clamp(16px, 8vw, 80px);
   font-family: "Courier Prime", monospace;
 }
@@ -130,6 +140,7 @@ body::before {
 .important::before {
   content: "IMPORTANT";
   background-color: #ff3dce;
+  color: #0f1870;
   padding: 2px 5px;
   position: absolute;
   font-size: 10px;
@@ -147,7 +158,7 @@ body::before {
 }
 
 .vote {
-  color: #d40000;
+  color: #c00000;
   font-weight: bold;
 }
 
@@ -173,9 +184,9 @@ body::before {
 }
 
 .content-right {
-  background-color: rgba(255, 61, 206, 0.87);
+  background-color: #ff3dce;
   padding: 20px 40px;
-  color: #1d33c4;
+  color: #0f1870;
   margin-top: 20px;
 }
 
