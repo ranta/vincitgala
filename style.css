@@ -1,3 +1,5 @@
+/* Page */
+
 html,
 body {
   height: 100%;
@@ -15,6 +17,8 @@ body {
   padding: 20px;
 }
 
+/* Header */
+
 .header {
   background-color: #ff3dce;
   text-align: center;
@@ -22,6 +26,24 @@ body {
   padding: 20px 80px;
   font-family: "Courier Prime", monospace;
 }
+
+.header h1 {
+  font-size: 58px;
+  margin: 0;
+}
+
+.header h2 {
+  color: #ffe84a;
+  margin: 0;
+}
+
+.date {
+  margin: 10px 0 0;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Intro with scrolling text */
 
 .intro {
   align-self: stretch;
@@ -55,6 +77,8 @@ body {
   }
 }
 
+/* Schedule */
+
 .content {
   background-color: #fff;
   padding: 20px;
@@ -62,22 +86,16 @@ body {
   margin-top: 20px;
 }
 
-.time {
-  color: #d40000;
-  font-weight: bold;
+.schedule-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #e10600;
 }
 
-.content-left {
-  background-color: rgba(255, 232, 74, 0.88);
-  padding: 20px 40px;
-  color: #000;
-  margin-top: 20px;
-}
-.content-right {
-  background-color: rgba(255, 61, 206, 0.87);
-  padding: 20px 40px;
-  color: #1d33c4;
-  margin-top: 20px;
+.schedule {
+  list-style-type: none;
 }
 
 li.li-emoji {
@@ -99,6 +117,74 @@ li.li-emoji:hover {
   top: 2px;
   left: -85px;
 }
+
+.time {
+  color: #d40000;
+  font-weight: bold;
+}
+
+.event {
+  font-weight: bold;
+}
+
+.vote {
+  color: #d40000;
+  font-weight: bold;
+}
+
+.vote:hover,
+.vote:focus-visible {
+  background-color: #ffe84a;
+}
+
+/* Dress code and What to expect */
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10px;
+  margin-top: 20px;
+}
+
+.content-left {
+  background-color: rgba(255, 232, 74, 0.88);
+  padding: 20px 40px;
+  color: #000;
+  margin-top: 20px;
+}
+
+.content-right {
+  background-color: rgba(255, 61, 206, 0.87);
+  padding: 20px 40px;
+  color: #1d33c4;
+  margin-top: 20px;
+}
+
+.content-right h3 {
+  color: #ffe84a;
+  font-family: "Courier Prime", monospace;
+}
+
+.ukko {
+  animation: run 5s linear infinite;
+}
+
+@keyframes run {
+  50% {
+    transform: scaleX(-1);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+/* Music */
+
+.music {
+  margin-top: 20px;
+}
+
+/* Bouncing gift */
 
 /* Covers the first screen. The gift moves inside it, and the keyframes
    use its size through the cqw and cqh units. */
@@ -142,83 +228,12 @@ li.li-emoji:hover {
   0% {
     translate: 0 0;
   }
-
   100% {
     translate: calc(100cqw - 50px) 0;
   }
 }
 
-.ukko {
-  animation: linear infinite;
-  animation-name: run;
-  animation-duration: 5s;
-}
-@keyframes run {
-  50% {
-    transform: scaleX(-1);
-  }
-  100% {
-    transform: scaleX(1);
-  }
-}
-
-.header h1 {
-  font-size: 58px;
-  margin: 0;
-}
-
-.info-row {
-  display: flex;
-  justify-content: space-between;
-  column-gap: 10px;
-  margin-top: 20px;
-}
-
-.header h2 {
-  color: #ffe84a;
-  margin: 0;
-}
-
-.date {
-  margin: 10px 0 0;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.schedule-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  color: #e10600;
-}
-
-.schedule {
-  list-style-type: none;
-}
-
-.event {
-  font-weight: bold;
-}
-
-.vote {
-  color: #d40000;
-  font-weight: bold;
-}
-
-.vote:hover,
-.vote:focus-visible {
-  background-color: #ffe84a;
-}
-
-.content-right h3 {
-  color: #ffe84a;
-  font-family: "Courier Prime", monospace;
-}
-
-.music {
-  margin-top: 20px;
-}
+/* Phones */
 
 @media (max-width: 700px) {
   .container {
@@ -269,6 +284,8 @@ li.li-emoji:hover {
     width: 100%;
   }
 }
+
+/* Reduced motion */
 
 /* Visitors can ask their system for less motion, for example because
    moving content makes them dizzy. Stop the animations for them and
