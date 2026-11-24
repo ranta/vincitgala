@@ -103,38 +103,51 @@ li.li-emoji:hover {
   left: -85px;
 }
 
+/* Covers the first screen. The gift moves inside it, and the keyframes
+   use its size through the cqw and cqh units. */
+.paketti-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  container-type: size;
+  pointer-events: none;
+}
+
 .paketti {
   width: 50px;
   height: 50px;
   background: url("images/paketti.png");
   background-size: contain;
   background-repeat: no-repeat;
-  position: absolute;
 
   animation:
     toRight linear 6.8s infinite alternate,
     bounce linear 17s infinite alternate;
 }
 
+/* bounce animates transform and toRight animates translate. They are
+   separate properties, so the two animations add up. */
 @keyframes bounce {
   0% {
-    top: 0;
+    transform: translateY(0);
   }
   50% {
-    top: calc(100% - 50px);
+    transform: translateY(calc(100cqh - 50px));
   }
   100% {
-    top: 0;
+    transform: translateY(0);
   }
 }
 
 @keyframes toRight {
   0% {
-    left: 0;
+    translate: 0 0;
   }
 
   100% {
-    left: calc(100% - 50px);
+    translate: calc(100cqw - 50px) 0;
   }
 }
 
