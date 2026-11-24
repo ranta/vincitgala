@@ -203,6 +203,16 @@ li.li-emoji:hover {
   font-weight: bold;
 }
 
+.vote {
+  color: #d40000;
+  font-weight: bold;
+}
+
+.vote:hover,
+.vote:focus-visible {
+  background-color: #ffe84a;
+}
+
 .content-right h3 {
   color: #ffe84a;
   font-family: "Courier Prime", monospace;
