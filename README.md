@@ -1,6 +1,6 @@
 # Vincit Turku Christmas Party Gala 2026
 
-The invitation page for the Vincit Turku Christmas party on 4.12.2026.
+The invitation page for the Vincit Turku Christmas party on 4.12.2026 at the Turku Office.
 It shows the schedule, the dress code and a link to the awards voting form.
 
 The page is published with GitHub Pages:
