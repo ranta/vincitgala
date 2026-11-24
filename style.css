@@ -120,12 +120,8 @@ li.li-emoji:hover {
   0% {
     top: 0;
   }
-  48% {
-  }
   50% {
     top: calc(100% - 50px);
-  }
-  52% {
   }
   100% {
     top: 0;
