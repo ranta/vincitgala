@@ -252,6 +252,15 @@ body::before {
   font-family: "Courier Prime", monospace;
 }
 
+/* The headings are written in normal case in the HTML, so screen
+   readers read them as words, and shown in capitals here. */
+.header h1,
+.schedule-title,
+.dress-code h3,
+.what-to-expect h3 {
+  text-transform: uppercase;
+}
+
 .ukko {
   animation: run 5s linear infinite;
 }
