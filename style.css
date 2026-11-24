@@ -194,8 +194,8 @@ body::before {
   background-color: rgba(255, 232, 74, 0.5);
 }
 
-.important::before {
-  content: "IMPORTANT";
+.badge {
+  text-transform: uppercase;
   background-color: #ff3dce;
   color: #0f1870;
   padding: 2px 5px;
@@ -354,7 +354,7 @@ body::before {
     margin-bottom: 8px;
   }
 
-  .important::before {
+  .badge {
     position: static;
     display: inline-block;
     margin-right: 6px;
