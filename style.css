@@ -125,6 +125,9 @@ body::before {
 
 .intro {
   align-self: stretch;
+  display: flex;
+  align-items: center;
+  gap: 12px;
   background-color: #ffe84a;
   padding: 20px;
   color: #1d33c4;
@@ -132,8 +135,11 @@ body::before {
 }
 
 .marquee {
+  flex: 1;
+  min-width: 0;
   overflow: hidden;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .marquee-text {
@@ -142,16 +148,27 @@ body::before {
   animation: marquee 25s linear infinite;
 }
 
-/* The text stops while the mouse is over it, while it has keyboard
-   focus, and after a click or tap (the "paused" class). */
-.marquee {
+/* The text stops while the mouse is over it, and after the Pause
+   button or the text is clicked or tapped (the "paused" class). */
+.marquee:hover .marquee-text,
+.marquee.paused .marquee-text {
+  animation-play-state: paused;
+}
+
+.marquee-toggle {
+  flex: none;
+  font: inherit;
+  font-weight: bold;
+  color: #1d33c4;
+  background-color: #fff;
+  border: 2px solid #1d33c4;
+  border-radius: 6px;
+  padding: 4px 12px;
   cursor: pointer;
 }
 
-.marquee:hover .marquee-text,
-.marquee:focus .marquee-text,
-.marquee.paused .marquee-text {
-  animation-play-state: paused;
+.marquee-toggle:hover {
+  background-color: #fff4a4;
 }
 
 @keyframes marquee {
@@ -395,5 +412,10 @@ body::before {
 
   .marquee-text {
     padding-left: 0;
+  }
+
+  /* Nothing moves, so there is nothing to pause. */
+  .marquee-toggle {
+    display: none;
   }
 }

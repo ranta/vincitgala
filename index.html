@@ -28,10 +28,17 @@
         new cursoreffects.fairyDustCursor();
       });
 
-      // Phones have no hover, so a tap pauses and restarts the scrolling text.
+      // The Pause button, or a tap on the text, pauses and restarts the
+      // scrolling text. The button text says what the next press does.
       document.addEventListener("DOMContentLoaded", () => {
         const marquee = document.querySelector(".marquee");
-        marquee.addEventListener("click", () => marquee.classList.toggle("paused"));
+        const button = document.querySelector(".marquee-toggle");
+        const toggle = () => {
+          const paused = marquee.classList.toggle("paused");
+          button.textContent = paused ? "Play" : "Pause";
+        };
+        marquee.addEventListener("click", toggle);
+        button.addEventListener("click", toggle);
       });
     </script>
     <link rel="stylesheet" href="style.css">
@@ -47,11 +54,12 @@
       </header>
       <main class="main">
         <div class="intro">
-          <div class="marquee" tabindex="0" title="Click or tap to pause">
+          <div class="marquee">
             <p class="marquee-text">
               <img alt="" src="images/star.png" width="26" height="25"> Time to dig out the sequins, straighten those bow ties and get ready for Turku's most fabulous, totally unofficial gala night of the year. <img alt="" src="images/star.png" width="26" height="25">
             </p>
           </div>
+          <button class="marquee-toggle" type="button">Pause</button>
         </div>
         <section class="content" aria-labelledby="schedule-heading">
           <h3 class="schedule-title" id="schedule-heading"><img alt="" src="images/clock.png" width="26" height="25">Schedule<img alt="" src="images/clock.png" width="26" height="25"></h3>
