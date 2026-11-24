@@ -29,9 +29,7 @@
 
 /* Page */
 
-html,
 body {
-  height: 100%;
   margin: 0;
   font-family: "Comic Relief", cursive, sans-serif;
 }
