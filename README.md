@@ -22,13 +22,7 @@ The page is plain HTML and CSS. It has no build step and no dependencies to inst
 
 ## Run it on your computer
 
-Start a web server in the repository folder:
-
-```bash
-python3 -m http.server 8000
-```
-
-Then open http://localhost:8000 in a browser.
+Open `index.html` in a browser.
 
 ## Things to know before you change the page
 
