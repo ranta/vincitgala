@@ -167,6 +167,36 @@ li.li-emoji:hover {
   margin-top: 20px;
 }
 
+.header h2 {
+  color: #ffe84a;
+  margin: 0;
+}
+
+.schedule-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #e10600;
+}
+
+.schedule {
+  list-style-type: none;
+}
+
+.event {
+  font-weight: bold;
+}
+
+.content-right h3 {
+  color: #ffe84a;
+  font-family: "Courier Prime", monospace;
+}
+
+.music {
+  margin-top: 20px;
+}
+
 @media (max-width: 700px) {
   .container {
     padding: 10px;
