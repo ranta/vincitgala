@@ -98,17 +98,17 @@ body {
   list-style-type: none;
 }
 
-li.li-emoji {
+.schedule-item {
   position: relative;
   display: flex;
   gap: 10px;
 }
 
-li.li-emoji:hover {
+.schedule-item:hover {
   background-color: rgba(255, 232, 74, 0.5);
 }
 
-.li-important::before {
+.important::before {
   content: "IMPORTANT";
   background-color: #ff3dce;
   padding: 2px 5px;
@@ -268,12 +268,12 @@ li.li-emoji:hover {
     padding-left: 0;
   }
 
-  li.li-emoji {
+  .schedule-item {
     display: block;
     margin-bottom: 8px;
   }
 
-  .li-important::before {
+  .important::before {
     position: static;
     display: inline-block;
     margin-right: 6px;
