@@ -51,8 +51,11 @@ body::before {
   margin: 0;
 }
 
+/* The icons scale with the text, up to their natural height. width:
+   auto keeps their shape, from the width and height in the HTML. */
 .header h1 img {
-  max-height: 1em;
+  height: min(1em, 57px);
+  width: auto;
 }
 
 .header h2 {
@@ -63,7 +66,8 @@ body::before {
 
 /* 1.625em is the natural height of the icons (39 px) at 24 px. */
 .header h2 img {
-  max-height: 1.625em;
+  height: min(1.625em, 39px);
+  width: auto;
 }
 
 .date {
